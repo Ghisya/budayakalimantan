@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALIMANTAN</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/busana-interaktif.css">
+<link rel="stylesheet" href="../css/makanan-resep.css">
+<link rel="stylesheet" href="../css/tradisi.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="progress"></div>
+<header class="navbar">
+  <a href="#home" class="logo"><span class="logo-icon">❖</span> Warisan<span>Borneo</span></a>
+  <button class="hamburger" id="burger" aria-label="Buka menu">&#9776;</button>
+  <nav class="nav-links" id="nav">
+    <a href="#home">Home</a>
+    <a href="#budaya">Budaya</a>
+    <a href="#rumah">Rumah Betang</a>
+    <a href="#busana">Busana Adat</a>
+    <a href="#makanan">Makanan</a>
+    <a href="budaya.html" class="nav-cta">Jelajah Kalimantan <span>&#10140;</span></a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <video autoplay loop muted playsinline class="hero-video"><source src="../aset/ssstik.io_1793608720581.mp4" type="video/mp4"></video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="subtitle">Kalimantan &bull; Tanah Kutai & Dayak</p>
+    <h1>Warisan Budaya KALIMANTAN</h1>
+    <p class="description" id="typed" data-text="Dari Rumah Betang, busana adat, hingga cita rasa dapur leluhur, setiap tradisi menyimpan makna tentang kebersamaan, hormat pada alam, dan jati diri."></p>
+    <div class="hero-buttons">
+      <a href="#budaya" class="btn-primary">Jelajahi Budaya</a>
+      <a href="#makanan" class="btn-secondary">Cicipi Kuliner</a>
+    </div>
+  </div>
+</section>
+<div class="ornament-divider"></div>
+
+<section id="budaya" class="section-container">
+  <div class="section-title reveal"><span>KENALAN DULU</span><h2>Dua Suku, Satu Bumi Borneo</h2><div class="title-line"></div></div>
+  <div class="two-col">
+    <article class="panel reveal">
+      <div class="photo"><img src="../images/kutai.jpg" alt="Foto lama tokoh Kutai berbusana adat" loading="lazy"></div>
+      <h3>Suku Kutai</h3>
+      <p><b>Asal-usul:</b> <i>Urang Kutai</i> adalah suku Melayu asli yang mendiami pesisir dan tepian Sungai Mahakam, Kalimantan Timur, dengan pusat budaya di Tenggarong. Menurut tradisi lisan dan sejarah, leluhur mereka termasuk rumpun Melayu yang bermigrasi dari daratan Asia ribuan tahun lalu, lalu menetap di tepian Mahakam dan bercampur dengan penduduk asli setempat.</p>
+      <ul class="facts">
+        <li><b>Nama Kutai:</b> pada awalnya bukan nama suku, melainkan nama wilayah dan kerajaan — Kerajaan Kutai Martadipura (abad ke-4, berpusat di Muara Kaman), kerajaan Hindu tertua di Nusantara yang dibuktikan prasasti Yupa peninggalan Raja Kudungga, Aswawarman, dan Mulawarman.</li>
+        <li><b>Kesultanan:</b> pada abad ke-13 berdiri Kesultanan Kutai Kartanegara di Kutai Lama, yang kemudian berpusat di Tenggarong dan memeluk Islam. Masyarakat Dayak tepian sungai yang memeluk Islam inilah yang kemudian dikenal sebagai Urang Kutai, dan mereka menyebut suku Dayak sebagai <i>Densanak Tuha</i> (saudara tua) karena masih satu leluhur.</li>
+        <li><b>Nilai:</b> religius, santun, dan menjunjung musyawarah.</li>
+      </ul>
+      <button class="trad-btn" data-suku="kutai">Lihat Tradisi Suku Kutai &rarr;</button>
+    </article>
+    <article class="panel reveal">
+      <div class="photo"><img src="../images/dayak.jpg" alt="Foto lama tiga pria Dayak bertato dan berhias manik" loading="lazy"></div>
+      <h3>Suku Dayak</h3>
+      <p><b>Asal-usul:</b> Dayak bukan satu suku tunggal, melainkan nama kolektif untuk ratusan sub-suku penduduk asli Borneo, seperti Kenyah, Kayan, Ngaju, Iban, Benuaq, dan Ot Danum. Leluhur mereka sudah mendiami pulau Borneo sejak puluhan ribu tahun lalu — dibuktikan temuan arkeologi di Gua Niah, Sarawak — dan berkembang bersama migrasi penutur bahasa Austronesia dari utara.</p>
+      <ul class="facts">
+        <li><b>Nama Dayak:</b> berasal dari kata <i>daya</i> yang berarti hulu sungai atau pedalaman, karena masyarakatnya bermukim di hulu sungai dan pedalaman hutan Borneo.</li>
+        <li><b>Kehidupan:</b> hidup selaras dengan hutan dan sungai, dengan kepercayaan asli Kaharingan yang menghormati alam dan leluhur.</li>
+        <li><b>Nilai:</b> gotong royong, hormat pada alam, dan kejujuran.</li>
+      </ul>
+      <button class="trad-btn" data-suku="dayak">Lihat Tradisi Suku Dayak &rarr;</button>
+    </article>
+  </div>
+</section>
+
+<!-- Popup tradisi per suku -->
+<div class="mk-modal" id="trModal" role="dialog" aria-modal="true">
+  <div class="mk-box">
+    <button class="mk-close" id="trClose" aria-label="Tutup">&times;</button>
+    <div style="padding:1.6rem 1.6rem 0">
+      <span class="mk-asal" id="trKata"></span>
+      <h3 id="trJudul" style="padding-right:1.6rem"></h3>
+      <p id="trIntro" style="color:var(--abu);font-size:.94rem"></p>
+    </div>
+    <div class="tr-list" id="trList"></div>
+    <div class="mk-nav">
+      <button id="trPrev">&larr; Suku Lainnya</button>
+      <span id="trHitung"></span>
+      <button id="trNext">Suku Lainnya &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<section id="rumah" class="section-container bg-dark">
+  <div class="section-title light reveal"><span>RUMAH ADAT</span><h2>Rumah Betang & Lamin</h2><div class="title-line"></div>
+    <p class="section-desc">Ketuk setiap bagian rumah untuk melihat maknanya.</p></div>
+  <div class="house-split"><div class="house-left">
+  <div class="house reveal">
+    <div class="roof" data-title="Atap Sirap Ulin" data-text="Atap panjang dari kayu ulin melindungi seluruh keluarga sekaligus melambangkan perlindungan dan kebersamaan di bawah satu naungan.">🏠 Atap</div>
+    <div class="walls">
+      <button class="hot" data-title="Tiang Ulin" data-text="Kayu ulin (kayu besi) sangat kuat dan tahan ratusan tahun. Maknanya: keteguhan, ketangguhan, dan kokohnya persatuan.">Tiang</button>
+      <button class="hot" data-title="Ukiran & Patung" data-text="Motif naga, enggang, dan sulur menjadi penolak bala dan penanda status serta cerita leluhur pemilik rumah.">Ukiran</button>
+      <button class="hot" data-title="Lorong Panjang (Ruai)" data-text="Satu lorong dipakai bersama untuk berkumpul, musyawarah, dan pesta adat. Maknanya: kerukunan dan musyawarah.">Ruai</button>
+      <button class="hot" data-title="Bilik Keluarga" data-text="Ratusan orang tinggal dalam satu rumah, tiap keluarga punya bilik sendiri. Maknanya: hidup mandiri namun tetap saling menjaga.">Bilik</button>
+    </div>
+    <div class="stilts" data-title="Rumah Panggung" data-text="Ditinggikan dari tanah untuk menghindari banjir, binatang buas, dan musuh. Maknanya: kewaspadaan dan menyatu dengan alam.">Panggung ⬆</div>
+  </div>
+  <div class="info-box" id="info"><h3>Pilih bagian rumah</h3><p>Rumah Betang adalah rumah panjang suku Dayak. Di Kalimantan Timur, rumah serupa disebut <b>Lamin</b>. Satu rumah bisa dihuni puluhan keluarga.</p></div>
+  </div>
+  <div class="house-right reveal">
+    <div class="hp-stage"><img id="hpimg" src="../images/betang.jpg" alt="Rumah Betang"></div>
+    <div class="hp-cap"><h3 id="hpt">Rumah Betang</h3><p id="hpd">Rumah panjang beratap sirap. Satu atap dihuni puluhan keluarga.</p></div>
+    <div class="hp-thumbs">
+      <button class="on" data-src="betang.jpg" data-t="Rumah Betang" data-d="Rumah panjang beratap sirap. Satu atap dihuni puluhan keluarga."><img src="../images/betang.jpg" alt="Rumah Betang"></button>
+      <button data-src="lamin.jpg" data-t="Rumah Adat Gaya Lamin" data-d="Dinding depan berukir motif merah, berdiri di atas deretan tiang panggung."><img src="../images/lamin.jpg" alt="Lamin"></button>
+      <button data-src="rumah-panggung.jpg" data-t="Rumah Panggung Tradisional" data-d="Ditinggikan di atas tiang kayu berdinding papan, agar aman dari banjir dan binatang."><img src="../images/rumah-panggung.jpg" alt="Rumah panggung"></button>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="busana" class="section-container">
+  <div class="section-title reveal"><span>BUSANA ADAT</span><h2>Pakaian Kutai & Dayak</h2><div class="title-line"></div>
+    <p class="section-desc" style="color:var(--abu)">Baru: sekarang busananya bisa dijelajahi per bagian — ketuk titik emas pada tokohnya!</p></div>
+
+  <!-- ===== Jelajah Busana Interaktif ===== -->
+  <div class="bi-wrap reveal" id="busana-interaktif">
+    <div class="bi-head">
+      <h3>❖ Jelajah Busana Interaktif ❖</h3>
+      <p>Pilih tokohnya, lalu <b>ketuk titik emas</b> pada bagian bajunya atau ketuk kartunya. Akan muncul gambar bagian itu saja, lengkap dengan penjelasan dan maknanya — seperti menjelajahi Rumah Betang di atas.</p>
+    </div>
+    <div class="bi-tabs" id="biTokohTabs"></div>
+    <div class="bi-main">
+      <div class="bi-stage" id="biStage"></div>
+      <div class="bi-side">
+        <h3 id="biJudul"></h3>
+        <p id="biIntro"></p>
+        <div class="bi-progress" id="biProgress"></div>
+        <div class="bi-cards" id="biCards"></div>
+        <div class="bi-actions">
+          <button class="bi-btn" id="biAcak">🎲 Bagian Acak</button>
+          <button class="bi-btn ghost" id="biReset">↺ Ulangi Jelajah</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup detail bagian busana -->
+  <div class="bi-modal" id="biModal" role="dialog" aria-modal="true">
+    <div class="bi-box">
+      <button class="bi-close" id="biClose" aria-label="Tutup">&times;</button>
+      <div class="bi-modal-grid">
+        <div class="bi-modal-fig"><img id="biModalImg" src="" alt="Gambar bagian busana"></div>
+        <div>
+          <span class="bi-kode" id="biModalKode"></span>
+          <h3 id="biModalNama"></h3>
+          <p id="biModalDesc"></p>
+          <div class="bi-makna"><h4>✨ Makna & Filosofi</h4><p id="biModalMakna"></p></div>
+        </div>
+      </div>
+      <div class="bi-nav">
+        <button id="biPrev">&larr; Sebelumnya</button>
+        <span id="biModalHitung"></span>
+        <button id="biNext">Berikutnya &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <article class="b-row reveal">
+    <div class="bphoto"><img src="../images/busana-kutai.jpg" alt="Pasangan berbusana adat Kutai" loading="lazy"></div>
+    <div class="busana-txt">
+      <span class="b-tag">Suku Kutai &bull; Tepian Sungai Mahakam</span>
+      <h3>Kustin & Miskat</h3>
+      <p>Busana adat Kutai lahir dari lingkungan keraton Kesultanan Kutai Kartanegara. Pria mengenakan <b>Kustin</b>, baju tertutup berkerah tinggi dengan sulaman atau tepian benang emas, dipadu sarung tenun dan penutup kepala. Wanita mengenakan <b>Miskat</b>, busana longgar yang menutup tubuh dengan hiasan emas, sarung tenun, dan perhiasan kepala.</p>
+      <p>Dahulu busana ini dipakai kalangan bangsawan pada upacara besar seperti pernikahan dan pesta Erau. Kini ia dikenakan pengantin, penari, dan para duta budaya Kutai. Warna gelap dengan kilau emas menampilkan sosok yang berwibawa, santun, dan terhormat, sesuai nilai Melayu-Islam yang dianut masyarakatnya.</p>
+    </div>
+  </article>
+
+  <div class="b-mid reveal"><span>❖</span> Dua tradisi, satu rumah Borneo <span>❖</span></div>
+
+  <article class="b-row rev reveal">
+    <div class="busana-txt">
+      <span class="b-tag">Suku Dayak &bull; Rimba Borneo</span>
+      <h3>King Baba & King Bibinge</h3>
+      <p><b>King Baba</b> adalah busana pria Dayak berupa rompi dan kain bawahan yang dihiasi manik dan motif ukir, sering dilengkapi mahkota bulu enggang serta mandau. <b>King Bibinge</b> adalah busana wanita berupa atasan dan rok berhias manik warna-warni, dengan topi atau mahkota manik di kepala.</p>
+      <p>Bahan aslinya berasal dari kulit kayu hutan yang ditempa hingga halus, lalu dihias manik dan motif sulur, spiral, dan naga (aso). Busana ini dipakai pada upacara adat, penyambutan tamu, dan pesta panen seperti Gawai dan Hudoq. Setiap hiasannya adalah cerita tentang alam, leluhur, dan kehormatan suku.</p>
+    </div>
+    <div class="bphoto"><img src="../images/busana-dayak.jpg" alt="Pasangan berbusana adat Dayak" loading="lazy"></div>
+  </article>
+</section>
+<div class="ornament-divider"></div>
+
+<section id="makanan" class="section-container bg-dark">
+  <div class="section-title light reveal"><span>KULINER</span><h2>Cita Rasa Leluhur</h2><div class="title-line"></div>
+    <p class="section-desc">Ketuk kartu makanan untuk melihat asal-usulnya, bahan-bahannya, dan cara membuatnya.</p></div>
+  <div class="mk-food-grid" id="mkGrid"></div>
+</section>
+
+<!-- Popup asal-usul & resep makanan -->
+<div class="mk-modal" id="mkModal" role="dialog" aria-modal="true">
+  <div class="mk-box">
+    <button class="mk-close" id="mkClose" aria-label="Tutup">&times;</button>
+    <div class="mk-grid">
+      <div class="mk-fig"><img id="mkImg" src="" alt="Foto makanan"></div>
+      <div>
+        <span class="mk-asal" id="mkAsal"></span>
+        <h3 id="mkNama"></h3>
+        <p id="mkDesc"></p>
+        <h4>🧂 Bahan-Bahan</h4>
+        <ul id="mkBahan"></ul>
+        <h4>👩‍🍳 Cara Membuat</h4>
+        <ol id="mkCara"></ol>
+      </div>
+    </div>
+    <div class="mk-nav">
+      <button id="mkPrev">&larr; Sebelumnya</button>
+      <span id="mkHitung"></span>
+      <button id="mkNext">Berikutnya &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal"><div class="modal-box"><button id="close" aria-label="Tutup">&times;</button><h3 id="mt"></h3><p id="mp"></p></div></div>
+<footer class="footer"><p>&copy; 2026 Tugas PPKn - Warisan Budaya Kutai & Dayak. Dibuat dengan bangga.</p></footer>
+<script src="../js/script.js"></script>
+<script src="../js/busana-interaktif.js"></script>
+<script src="../js/makanan-resep.js"></script>
+<script src="../js/tradisi.js"></script>
+</body>
+</html>

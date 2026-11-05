@@ -1,0 +1,10 @@
+/* ===== Tombol & daftar tradisi per suku ===== */
+.trad-btn{margin-top:1rem;padding:.65rem 1.3rem;border-radius:30px;border:2px solid var(--merah);background:var(--merah);color:#fff;font-weight:700;transition:.25s}
+.trad-btn:hover{background:transparent;color:var(--merah)}
+.tr-list{padding:1rem 1.6rem .4rem;display:grid;gap:.9rem}
+.tr-item{display:grid;grid-template-columns:84px 1fr;gap:.9rem;align-items:start;background:#fff;border:1px solid #e7d9ae;border-radius:12px;padding:.8rem}
+.tr-item img{width:84px;height:84px;object-fit:cover;border-radius:10px}
+.tr-emoji{width:84px;height:84px;border-radius:10px;background:#fdf3d7;border:1px solid var(--emas);display:flex;align-items:center;justify-content:center;font-size:2rem}
+.tr-item h4{color:var(--merah2);font-size:1rem;margin-bottom:.2rem}
+.tr-item p{color:var(--abu);font-size:.9rem}
+@media(max-width:520px){.tr-item{grid-template-columns:64px 1fr}.tr-item img,.tr-emoji{width:64px;height:64px}}

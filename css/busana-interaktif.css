@@ -1,0 +1,63 @@
+/* ===== Jelajah Busana Interaktif ===== */
+.bi-wrap{max-width:1080px;margin:0 auto 3.5rem;background:#fff;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.10);border-top:5px solid var(--emas);padding:1.8rem clamp(1rem,4vw,2.2rem) 2rem}
+.bi-head{text-align:center;margin-bottom:1.2rem}
+.bi-head h3{color:var(--merah2);font-size:1.45rem;margin-bottom:.3rem}
+.bi-head p{color:var(--abu);font-size:.95rem;max-width:640px;margin:0 auto}
+.bi-tabs{display:flex;justify-content:center;gap:.55rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.bi-tab{padding:.55rem 1.1rem;border-radius:30px;border:2px solid var(--merah);background:transparent;color:var(--merah);font-weight:700;transition:.25s;line-height:1.25}
+.bi-tab small{display:block;font-weight:500;font-size:.72rem;opacity:.85}
+.bi-tab:hover{background:#fdf3d7}
+.bi-tab.active{background:var(--merah);color:#fff}
+.bi-main{display:grid;grid-template-columns:minmax(240px,360px) 1fr;gap:1.8rem;align-items:start}
+.bi-stage{position:relative;margin:0 auto;width:fit-content;max-width:100%;background:radial-gradient(ellipse at 50% 92%,rgba(0,0,0,.20),transparent 55%),linear-gradient(180deg,#fdf6e0,#f3e3bb);border:1px solid #e7d9ae;border-radius:14px;padding:0;text-align:center;overflow:visible}
+.bi-stage img{display:block;height:min(480px,68vh);width:auto;max-width:100%;border-radius:14px;filter:drop-shadow(0 10px 12px rgba(0,0,0,.25));animation:biMasuk .45s ease}
+@keyframes biMasuk{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.bi-hot{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;border:2px solid #fff;background:var(--merah);color:#fff;font-weight:800;font-size:.68rem;box-shadow:0 3px 10px rgba(0,0,0,.35);z-index:3;transition:.2s;animation:biDenyut 2s infinite}
+.bi-hot span{pointer-events:none}
+.bi-hot em{position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%) translateY(3px);background:var(--arang);color:#fff;font-style:normal;font-weight:600;font-size:.72rem;padding:.28rem .6rem;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}
+.bi-hot:hover,.bi-hot:focus-visible{transform:translate(-50%,-50%) scale(1.18);background:var(--emas);color:var(--arang);z-index:5}
+.bi-hot:hover em,.bi-hot:focus-visible em{opacity:1;transform:translateX(-50%) translateY(0)}
+.bi-hot.seen{background:var(--emas);color:var(--arang);animation:none}
+.bi-hot.seen::after{content:"✓";position:absolute;right:-6px;top:-7px;background:#2e7d32;color:#fff;border-radius:50%;width:15px;height:15px;font-size:.6rem;line-height:15px;border:1.5px solid #fff}
+@keyframes biDenyut{0%{box-shadow:0 3px 10px rgba(0,0,0,.35),0 0 0 0 rgba(212,175,55,.55)}70%{box-shadow:0 3px 10px rgba(0,0,0,.35),0 0 0 12px rgba(212,175,55,0)}100%{box-shadow:0 3px 10px rgba(0,0,0,.35),0 0 0 0 rgba(212,175,55,0)}}
+.bi-side h3{color:var(--merah2);margin-bottom:.35rem}
+.bi-side>p{color:var(--abu);font-size:.94rem;margin-bottom:1rem}
+.bi-progress{background:var(--krem);border:1px dashed var(--emas);border-radius:10px;padding:.7rem 1rem;font-size:.9rem;margin-bottom:1rem}
+.bi-bar{display:block;height:9px;background:#eadfc0;border-radius:6px;margin-top:.45rem;overflow:hidden}
+.bi-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--merah),var(--emas));border-radius:6px;transition:width .5s ease}
+.bi-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:.7rem}
+.bi-card{display:flex;gap:.7rem;align-items:center;text-align:left;background:#fff;border:1.5px solid #e5ddc8;border-radius:12px;padding:.55rem .7rem;transition:.2s}
+.bi-card img{width:52px;height:52px;object-fit:contain;background:#fdf6e0;border-radius:8px;flex:none}
+.bi-card b{display:block;font-size:.88rem;color:var(--arang);line-height:1.3}
+.bi-card small{color:var(--abu);font-size:.74rem;line-height:1.3;display:block}
+.bi-card:hover{border-color:var(--emas);transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.10)}
+.bi-card.seen{border-color:var(--emas);background:#fffdf2}
+.bi-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.1rem}
+.bi-btn{padding:.6rem 1.2rem;border-radius:30px;border:2px solid var(--merah);background:var(--merah);color:#fff;font-weight:700;transition:.25s}
+.bi-btn.ghost{background:transparent;color:var(--merah)}
+.bi-btn:hover{filter:brightness(1.12)}
+/* Popup detail bagian */
+.bi-modal{position:fixed;inset:0;background:rgba(18,14,10,.72);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:3000;padding:1rem}
+.bi-modal.open{display:flex}
+.bi-box{background:var(--krem);border-radius:16px;max-width:760px;width:100%;max-height:92vh;overflow:auto;position:relative;border-top:6px solid var(--emas);animation:biPop .3s ease}
+@keyframes biPop{from{opacity:0;transform:scale(.94) translateY(12px)}to{opacity:1;transform:none}}
+.bi-close{position:absolute;right:.7rem;top:.55rem;background:var(--merah);color:#fff;border:0;width:36px;height:36px;border-radius:50%;font-size:1.25rem;z-index:2;line-height:1}
+.bi-modal-grid{display:grid;grid-template-columns:minmax(200px,300px) 1fr;gap:1.4rem;padding:1.6rem}
+.bi-modal-fig{background:#fff;border:1px solid #e7d9ae;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:1rem;min-height:260px}
+.bi-modal-fig img{max-width:100%;max-height:340px;object-fit:contain;animation:biMasuk .35s ease}
+.bi-kode{color:var(--merah);font-weight:700;letter-spacing:1.5px;font-size:.75rem;text-transform:uppercase}
+.bi-box h3{color:var(--merah2);font-size:1.35rem;margin:.25rem 0 .6rem;padding-right:1.6rem}
+.bi-box p{color:var(--abu);font-size:.95rem}
+.bi-makna{margin-top:1rem;background:#fff;border-left:4px solid var(--emas);border-radius:8px;padding:.9rem 1rem}
+.bi-makna h4{color:var(--merah2);font-size:.9rem;margin-bottom:.3rem}
+.bi-makna p{font-size:.92rem}
+.bi-nav{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:0 1.6rem 1.4rem}
+.bi-nav span{font-size:.82rem;color:var(--abu)}
+.bi-nav button{padding:.5rem 1.1rem;border-radius:30px;border:2px solid var(--merah);background:transparent;color:var(--merah);font-weight:700;transition:.2s}
+.bi-nav button:hover{background:var(--merah);color:#fff}
+@media(max-width:760px){
+  .bi-main{grid-template-columns:1fr}
+  .bi-modal-grid{grid-template-columns:1fr;padding:1.2rem}
+  .bi-modal-fig{min-height:200px}
+  .bi-box h3{font-size:1.15rem}
+}

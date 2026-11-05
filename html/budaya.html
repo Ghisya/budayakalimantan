@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ensiklopedia Adat Borneo - Warisan Borneo</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/budaya.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-budaya">
+<div id="progress"></div>
+<header class="navbar">
+  <a href="index.html" class="logo"><span class="logo-icon">❖</span> Warisan<span>Borneo</span></a>
+  <button class="hamburger" id="burger" aria-label="Buka menu">&#9776;</button>
+  <nav class="nav-links" id="nav">
+    <a href="index.html">Beranda</a>
+    <a href="index.html" class="nav-cta back"><span>&larr;</span> Kembali ke Beranda</a>
+  </nav>
+</header>
+
+<section class="hero-b">
+  <div class="hb-text">
+    <span class="badge-subtitle">WARISAN BUDAYA BORNEO</span>
+    <h1>Ensiklopedia Adat Borneo</h1>
+    <p>Rumah adat, busana, tarian, senjata pusaka, musik, tradisi, hingga kuliner dari lima provinsi di Pulau Kalimantan, lengkap dengan makna di baliknya.</p>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cari: Sape, Tiwah, Banjar, Mandau...">
+      <span class="search-icon">&#128269;</span>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-item"><strong>5</strong><span>Provinsi</span></div>
+      <div class="stat-item"><strong>7</strong><span>Kategori</span></div>
+      <div class="stat-item"><strong id="totalCount">24</strong><span>Warisan</span></div>
+    </div>
+  </div>
+  <div class="hb-map">
+    <p class="map-hint">Ketuk titik provinsi di peta</p>
+    <div class="map-wrap">
+      <img src="../images/Kalimantan.png" alt="Peta Pulau Kalimantan">
+      <button class="pin" style="left:12%;top:60%" data-prov="Kalimantan Barat"><i></i><span>Kalimantan Barat</span></button>
+      <button class="pin" style="left:70%;top:36%" data-prov="Kalimantan Utara"><i></i><span>Kalimantan Utara</span></button>
+      <button class="pin" style="left:76%;top:62%" data-prov="Kalimantan Timur"><i></i><span>Kalimantan Timur</span></button>
+      <button class="pin" style="left:46%;top:76%" data-prov="Kalimantan Tengah"><i></i><span>Kalimantan Tengah</span></button>
+      <button class="pin" style="left:56%;top:90%" data-prov="Kalimantan Selatan"><i></i><span>Kalimantan Selatan</span></button>
+    </div>
+  </div>
+</section>
+<div class="ornament-divider"></div>
+
+<section class="culture-section" id="koleksi">
+  <div class="filter-wrap">
+    <div class="filter-tabs" id="filterTabs">
+      <button class="tab-btn active" data-filter="all">❖ Semua (<span id="count-all">24</span>)</button>
+      <button class="tab-btn" data-filter="rumah">🏠 Rumah Adat</button>
+      <button class="tab-btn" data-filter="baju">👘 Baju Adat</button>
+      <button class="tab-btn" data-filter="tarian">💃 Tarian</button>
+      <button class="tab-btn" data-filter="senjata">⚔️ Senjata</button>
+      <button class="tab-btn" data-filter="musik">🪕 Musik & Kriya</button>
+      <button class="tab-btn" data-filter="tradisi">🔥 Tradisi</button>
+      <button class="tab-btn" data-filter="makanan">🍲 Kuliner</button>
+    </div>
+  </div>
+  <p class="showing-info" id="showingInfo">Menampilkan seluruh warisan budaya Kalimantan</p>
+  <div class="chip" id="chip" hidden><span id="chipText"></span><button id="chipX" aria-label="Hapus filter provinsi">&times;</button></div>
+  <div class="culture-grid" id="cultureGrid"></div>
+</section>
+
+<div class="cm-overlay modal-overlay" id="cultureModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModal" aria-label="Tutup">&times;</button>
+    <div class="modal-img-wrapper">
+      <img src="" alt="Detail Budaya" id="modalImg" class="modal-img">
+      <span class="modal-badge" id="modalCategory">Kategori</span>
+    </div>
+    <div class="modal-content">
+      <span class="modal-origin" id="modalOrigin">Asal</span>
+      <h2 id="modalTitle">Judul</h2>
+      <p id="modalDesc" class="modal-desc"></p>
+      <div class="philosophy-box"><h4>✨ Makna, Filosofi & Keunikan</h4><p id="modalPhilosophy"></p></div>
+    </div>
+  </div>
+</div>
+
+<button id="top" aria-label="Kembali ke atas">&uarr;</button>
+<div class="ornament-divider"></div>
+<footer class="footer"><p>&copy; 2026 Tugas PPKn - Ensiklopedia Adat & Budaya Kalimantan. Dibuat dengan bangga.</p></footer>
+
+<script src="../js/budaya-tambah.js"></script>
+<script src="../js/data-budaya.js"></script>
+<script src="../js/budaya-halaman.js"></script>
+</body>
+</html>
